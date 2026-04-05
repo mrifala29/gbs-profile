@@ -1470,6 +1470,8 @@ ul { list-style: none; }
   .kpi-grid { grid-template-columns: 1fr 1fr; }
   .report-header-inner { flex-direction: column; align-items: flex-start; }
   .data-table { display: block; overflow-x: auto; }
+  .about-cards { grid-template-columns: 1fr; }
+  .about-card.span-2 { grid-column: span 1; }
 }
 @media (max-width: 480px) {
   .products-grid { grid-template-columns: 1fr; }
@@ -1478,4 +1480,12 @@ ul { list-style: none; }
   .hero-heading { font-size: 2.25rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { justify-content: center; }
+  .container { padding: 0 1.25rem; }
+  .section { padding: 2.5rem 0; }
+  .about-card { padding: 1.5rem 1.25rem; }
+  .stats-section { padding: 2rem 0; }
+  .stat-item { padding: 1.5rem 1rem; }
+  .stat-number { font-size: 2rem; }
+  .section-title { font-size: 1.75rem; }
+  .hero-badge { font-size: 0.625rem; padding: 5px 12px; }
 }
