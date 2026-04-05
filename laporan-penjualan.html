@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Laporan Penjualan GBS 2025 — Rekap lengkap penjualan gadget bekas Sidoarjo per kategori, lokasi, tren bulanan, dan lebih." />
+  <meta name="robots" content="noindex" />
+
+  <title>Laporan Penjualan — GBS Gadget Bekas Sidoarjo</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%237C5CFC'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Arial' font-weight='700' font-size='13'>GBS</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Page-specific overrides -->
+  <style>
+    body { cursor: auto; }
+    .cursor-dot, .cursor-ring { display: none; }
+    a, button, .btn, .kpi-card { cursor: pointer; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================== CURSOR ==================== -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" role="banner">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="index.html" aria-label="GBS Home">
+        <div class="nav-logo-mark" aria-hidden="true">GBS</div>
+        <div class="nav-logo-text">
+          Gadget Bekas
+          <span class="nav-logo-sub">Sidoarjo</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html#tentang">Tentang</a></li>
+          <li><a href="index.html#produk">Produk</a></li>
+          <li><a href="index.html#cara-beli">Cara Beli</a></li>
+          <li><a href="index.html#keunggulan">Keunggulan</a></li>
+          <li><a href="laporan-penjualan.html" style="color:#fff">Laporan</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://www.instagram.com/gadgetbekassidoarjo/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Instagram GBS">
+          <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
+        </a>
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="WhatsApp GBS">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="nav-drawer-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <a href="index.html">Beranda</a>
+    <a href="index.html#tentang">Tentang</a>
+    <a href="index.html#produk">Produk</a>
+    <a href="index.html#cara-beli">Cara Beli</a>
+    <a href="index.html#keunggulan">Keunggulan</a>
+    <a href="laporan-penjualan.html">Laporan</a>
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:1rem;justify-content:center">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+  </div>
+
+  <main>
+
+    <!-- ==================== REPORT HEADER ==================== -->
+    <section class="report-header" aria-labelledby="report-main-title">
+      <div class="container">
+        <div class="report-header-inner">
+          <div>
+            <span class="section-tag" style="margin-bottom:0.875rem">
+              <i class="fas fa-chart-line" aria-hidden="true"></i> Laporan Penjualan
+            </span>
+            <h1 class="report-title" id="report-main-title">
+              Rekap Penjualan Gadget Bekas
+            </h1>
+            <p class="report-subtitle">GBS — Gadget Bekas Sidoarjo</p>
+          </div>
+          <div class="report-year-badge">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            Data Penuh Jan — Des 2025
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== KPI CARDS ==================== -->
+    <section class="kpi-section" aria-labelledby="kpi-heading">
+      <div class="container">
+        <h2 id="kpi-heading" class="sr-only">Key Performance Indicators 2025</h2>
+        <div class="kpi-grid" data-stagger>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">📦</div>
+            <div class="kpi-label">Total Unit Terjual</div>
+            <div class="kpi-value" data-count="847">0</div>
+            <div class="kpi-note up"><i class="fas fa-arrow-trend-up" aria-hidden="true"></i> Growth sepanjang tahun</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">🏆</div>
+            <div class="kpi-label">Kategori Terlaris</div>
+            <div class="kpi-value" style="font-size:1.375rem">Smartphone<br/><span style="font-size:0.875rem;opacity:0.7">/ HP</span></div>
+            <div class="kpi-note info">312 unit · 36.8% dari total</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">📍</div>
+            <div class="kpi-label">Kab. Terbanyak Pembeli</div>
+            <div class="kpi-value" style="font-size:1.5rem">Sidoarjo</div>
+            <div class="kpi-note info">385 unit · 45.5% dari total</div>
+          </div>
+
+        </div><!-- /kpi-grid -->
+
+        <!-- KPI row 2 -->
+        <div class="kpi-grid" style="margin-top:1.125rem" data-stagger>
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">📅</div>
+            <div class="kpi-label">Bulan Terlaris</div>
+            <div class="kpi-value" style="font-size:1.5rem">November</div>
+            <div class="kpi-note info">106 unit · Harbolnas 11.11</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">🧾</div>
+            <div class="kpi-label">Rata-rata Unit/Bulan</div>
+            <div class="kpi-value" data-count="70" data-suffix=" unit">0</div>
+            <div class="kpi-note info">Konsisten sepanjang tahun</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">🗺️</div>
+            <div class="kpi-label">Jangkauan Kota</div>
+            <div class="kpi-value" data-count="8" data-suffix=" Kab/Kota">0</div>
+            <div class="kpi-note info">Sidoarjo, SBY, Gresik +5</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CHARTS ==================== -->
+    <section class="charts-section" aria-labelledby="charts-heading">
+      <div class="container">
+        <h2 id="charts-heading" class="sr-only">Grafik Penjualan</h2>
+
+        <!-- Row 1: Donut + Location Bar -->
+        <div class="charts-row-1" data-stagger>
+          <!-- Category Donut -->
+          <div class="chart-card">
+            <div class="chart-card-head">
+              <div>
+                <div class="chart-card-title">Penjualan Per Kategori</div>
+                <div class="chart-card-sub">Distribusi unit terjual berdasarkan jenis produk</div>
+              </div>
+              <span class="chart-badge">7 Kategori</span>
+            </div>
+            <div class="chart-canvas-wrap">
+              <canvas id="categoryChart" aria-label="Grafik penjualan per kategori"></canvas>
+            </div>
+            <div id="categoryLegend" class="donut-legend"></div>
+          </div>
+
+          <!-- Location Bar -->
+          <div class="chart-card">
+            <div class="chart-card-head">
+              <div>
+                <div class="chart-card-title">Sebaran Lokasi Pembeli</div>
+                <div class="chart-card-sub">Jumlah unit terjual berdasarkan kabupaten/kota pembeli</div>
+              </div>
+              <span class="chart-badge">8 Wilayah</span>
+            </div>
+            <div class="chart-canvas-wrap">
+              <canvas id="locationChart" aria-label="Grafik sebaran lokasi pembeli"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Top Products + Seller Origin -->
+        <div class="charts-row-2" data-stagger>
+          <!-- Top Products horizontal bar -->
+          <div class="chart-card">
+            <div class="chart-card-head">
+              <div>
+                <div class="chart-card-title">Produk Terlaris</div>
+                <div class="chart-card-sub">Perbandingan unit terjual antar kategori produk</div>
+              </div>
+              <span class="chart-badge">Ranking</span>
+            </div>
+            <div style="position:relative;height:260px">
+              <canvas id="topProductsChart" aria-label="Grafik produk terlaris"></canvas>
+            </div>
+          </div>
+
+          <!-- Seller Origin Pie -->
+          <div class="chart-card">
+            <div class="chart-card-head">
+              <div>
+                <div class="chart-card-title">Asal Barang (Lokasi Penjual)</div>
+                <div class="chart-card-sub">Distribusi lokasi asal barang yang masuk ke GBS</div>
+              </div>
+              <span class="chart-badge">4 Kota</span>
+            </div>
+            <div style="position:relative;height:260px">
+              <canvas id="originChart" aria-label="Grafik asal barang per kota"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insight Cards -->
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.125rem;margin-top:1.25rem" data-stagger>
+
+          <div class="chart-card" style="border-color:rgba(0,229,128,0.25)">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
+              <div style="width:40px;height:40px;border-radius:10px;background:rgba(0,229,128,0.12);border:1px solid rgba(0,229,128,0.28);display:flex;align-items:center;justify-content:center;font-size:1.125rem">📈</div>
+              <div>
+                <div style="font-weight:700;font-size:0.9375rem">Pertumbuhan Terbaik</div>
+                <div style="font-size:0.75rem;color:var(--text-muted)">Bulan Oktober → November</div>
+              </div>
+            </div>
+            <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--success)">+12.8%</div>
+            <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:4px">94 → 106 unit. Pertumbuhan positif</div>
+          </div>
+
+          <div class="chart-card" style="border-color:rgba(124,92,252,0.25)">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
+              <div style="width:40px;height:40px;border-radius:10px;background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.28);display:flex;align-items:center;justify-content:center;font-size:1.125rem">🏆</div>
+              <div>
+                <div style="font-weight:700;font-size:0.9375rem">Penjualan Pertama</div>
+                <div style="font-size:0.75rem;color:var(--text-muted)">Awal tahun (Bulan pertama)</div>
+              </div>
+            </div>
+            <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--accent-cyan)">45 Unit</div>
+            <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:4px">Langkah awal yang solid · Fondasi bisnis</div>
+          </div>
+
+        </div><!-- /insight cards -->
+
+      </div><!-- /container -->
+    </section>
+
+    <!-- ==================== CATEGORY & LOCATION TABLES ==================== -->
+    <section class="table-section" aria-labelledby="table-heading">
+      <div class="container">
+        <h2 id="table-heading" class="sr-only">Tabel Rekap 2025</h2>
+        <div class="table-card" data-reveal>
+          <div class="table-head">
+            <div>
+              <div class="table-title">Rekap Per Kategori Produk</div>
+              <div class="table-sub">Unit terjual dan porsi kontribusi tiap kategori</div>
+            </div>
+            <span class="chart-badge">7 Kategori</span>
+          </div>
+          <div style="overflow-x:auto">
+            <table class="data-table" aria-label="Tabel rekap per kategori produk">
+              <thead>
+                <tr>
+                  <th style="width:52px">#</th>
+                  <th>Kategori</th>
+                  <th>Unit Terjual</th>
+                  <th>Porsi (%)</th>
+                  <th>Volume Kontribusi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="rank-badge rank-1">1</span></td>
+                  <td class="font-bold">📱 Smartphone / HP</td>
+                  <td>312</td>
+                  <td class="text-success">36.8%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="100" style="width:0%"></div></div><span>312</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-2">2</span></td>
+                  <td class="font-bold">💻 Laptop</td>
+                  <td>248</td>
+                  <td>29.3%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="79" style="width:0%"></div></div><span>248</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-3">3</span></td>
+                  <td class="font-bold">📲 Tablet</td>
+                  <td>98</td>
+                  <td>11.6%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="31" style="width:0%"></div></div><span>98</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">4</span></td>
+                  <td class="font-bold">🖥️ Monitor</td>
+                  <td>72</td>
+                  <td>8.5%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="23" style="width:0%"></div></div><span>72</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">5</span></td>
+                  <td class="font-bold">⌚ Smartwatch</td>
+                  <td>58</td>
+                  <td>6.8%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="19" style="width:0%"></div></div><span>58</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">6</span></td>
+                  <td class="font-bold">⌨️ Keyboard</td>
+                  <td>33</td>
+                  <td>3.9%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="11" style="width:0%"></div></div><span>33</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">7</span></td>
+                  <td class="font-bold">🖱️ Mouse</td>
+                  <td>26</td>
+                  <td>3.1%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="8" style="width:0%"></div></div><span>26</span></div></td>
+                </tr>
+                <tr style="border-top:1px solid rgba(124,92,252,0.25);background:rgba(124,92,252,0.04)">
+                  <td>—</td>
+                  <td class="font-bold" style="color:var(--accent-cyan)">TOTAL</td>
+                  <td class="font-bold" style="color:var(--text-primary)">847</td>
+                  <td class="font-bold">100%</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Location table -->
+        <div class="table-card" style="margin-top:1.5rem" data-reveal>
+          <div class="table-head">
+            <div>
+              <div class="table-title">Sebaran Lokasi Pembeli — 2025</div>
+              <div class="table-sub">Distribusi unit terjual berdasarkan kabupaten/kota domisili pembeli</div>
+            </div>
+            <span class="chart-badge">8 Wilayah</span>
+          </div>
+          <div style="overflow-x:auto">
+            <table class="data-table" aria-label="Tabel sebaran lokasi pembeli">
+              <thead>
+                <tr>
+                  <th style="width:52px">#</th>
+                  <th>Kabupaten / Kota</th>
+                  <th>Unit Terjual</th>
+                  <th>Porsi (%)</th>
+                  <th>Volume</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="rank-badge rank-1">1</span></td>
+                  <td class="font-bold">📍 Sidoarjo</td>
+                  <td>385</td>
+                  <td class="text-success font-bold">45.5%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="100" style="width:0%"></div></div><span>385</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-2">2</span></td>
+                  <td class="font-bold">📍 Surabaya</td>
+                  <td>198</td>
+                  <td>23.4%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="51" style="width:0%"></div></div><span>198</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-3">3</span></td>
+                  <td class="font-bold">📍 Gresik</td>
+                  <td>87</td>
+                  <td>10.3%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="23" style="width:0%"></div></div><span>87</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">4</span></td>
+                  <td class="font-bold">📍 Mojokerto</td>
+                  <td>65</td>
+                  <td>7.7%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="17" style="width:0%"></div></div><span>65</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">5</span></td>
+                  <td class="font-bold">📍 Malang</td>
+                  <td>43</td>
+                  <td>5.1%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="11" style="width:0%"></div></div><span>43</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">6</span></td>
+                  <td class="font-bold">📍 Pasuruan</td>
+                  <td>38</td>
+                  <td>4.5%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="10" style="width:0%"></div></div><span>38</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">7</span></td>
+                  <td class="font-bold">📍 Bangkalan</td>
+                  <td>20</td>
+                  <td>2.4%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="5" style="width:0%"></div></div><span>20</span></div></td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge rank-other">8</span></td>
+                  <td class="font-bold">📍 Lainnya</td>
+                  <td>11</td>
+                  <td>1.3%</td>
+                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="3" style="width:0%"></div></div><span>11</span></div></td>
+                </tr>
+                <tr style="border-top:1px solid rgba(124,92,252,0.25);background:rgba(124,92,252,0.04)">
+                  <td>—</td>
+                  <td class="font-bold" style="color:var(--accent-cyan)">TOTAL</td>
+                  <td class="font-bold" style="color:var(--text-primary)">847</td>
+                  <td class="font-bold">100%</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section style="padding:3rem 0 5rem" aria-labelledby="report-cta-heading">
+      <div class="container">
+        <div class="cta-card" data-reveal="scale">
+          <span class="cta-tag"><i class="fas fa-home" aria-hidden="true"></i> Kembali ke Beranda</span>
+          <h2 class="cta-title" id="report-cta-heading">Tertarik Beli Gadget Bekas?</h2>
+          <p class="cta-desc">Data sudah berbicara — ratusan pelanggan puas telah berbelanja di GBS. Giliran kamu!</p>
+          <div class="cta-buttons">
+            <a href="index.html" class="btn btn-white btn-lg">
+              <i class="fas fa-home" aria-hidden="true"></i> Kembali ke Beranda
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo footer-logo">
+            <div class="nav-logo-mark" aria-hidden="true">GBS</div>
+            <div class="nav-logo-text">Gadget Bekas <span class="nav-logo-sub">Sidoarjo</span></div>
+          </div>
+          <p class="footer-brand-desc">Laporan ini merupakan rekap data penjualan internal GBS sepanjang tahun 2025.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/gadgetbekassidoarjo/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Navigasi</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index.html#tentang">Tentang</a></li>
+            <li><a href="index.html#produk">Produk</a></li>
+            <li><a href="laporan-penjualan.html">Laporan</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Laporan</h3>
+          <ul class="footer-links">
+            <li><a href="#kpi-heading">KPI Overview</a></li>
+            <li><a href="#charts-heading">Grafik Penjualan</a></li>
+            <li><a href="#table-heading">Tabel Kategori &amp; Lokasi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Kontak</h3>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fab fa-whatsapp footer-contact-icon" aria-hidden="true"></i>
+              <span>+62 812-3456-7890</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fab fa-instagram footer-contact-icon" aria-hidden="true"></i>
+              <span>@gadgetbekassidoarjo</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-location-dot footer-contact-icon" aria-hidden="true"></i>
+              <span>Sidoarjo, Jawa Timur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 <a href="index.html">GBS — Gadget Bekas Sidoarjo</a>. Data bersifat internal.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="index.html">← Kembali ke Beranda</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp GBS">
+    <i class="fab fa-whatsapp" aria-hidden="true" style="color:#fff"></i>
+    <span class="wa-float-tooltip">Chat WhatsApp</span>
+  </a>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Main JS + Charts JS -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/charts.js"></script>
+</body>
+</html>
