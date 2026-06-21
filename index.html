@@ -94,17 +94,38 @@
     ];
 
     async function loadPartials() {
-      document.getElementById('preloader').style.display = 'none';
-
-      await Promise.all(partials.map(async ([name, id]) => {
+      console.log('Starting loadPartials...');
+      for (const [name, id] of partials) {
         const el = document.getElementById(id);
-        if (!el) return;
-        const res = await fetch(`partials/${name}.html`);
-        if (res.ok) el.innerHTML = await res.text();
-      }));
+        if (!el) {
+          console.warn(`Container #${id} not found`);
+          continue;
+        }
+        try {
+          console.log(`Loading partials/${name}.html...`);
+          const res = await fetch(`partials/${name}.html`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          el.innerHTML = await res.text();
+          console.log(`✅ Loaded ${name}`);
+        } catch (err) {
+          console.error(`❌ Failed to load ${name}:`, err);
+          el.innerHTML = `<p style="color:red;padding:1rem">Error loading ${name}</p>`;
+        }
+      }
 
+      console.log('All partials loaded, loading main.js...');
       const s = document.createElement('script');
       s.src = 'assets/js/main.js';
+      s.onload = () => {
+        console.log('✅ main.js loaded');
+        // Trigger hidePreloader after 1.5s to show loading animation
+        setTimeout(() => {
+          if (window.hidePreloader) {
+            window.hidePreloader();
+          }
+        }, 1500);
+      };
+      s.onerror = (err) => console.error('❌ Failed to load main.js:', err);
       document.body.appendChild(s);
     }
 
