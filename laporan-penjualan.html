@@ -8,6 +8,7 @@
 
   <title>Laporan Penjualan — GBS Gadget Bekas Sidoarjo</title>
 
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%237C5CFC'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='Arial' font-weight='700' font-size='13'>GBS</text></svg>" />
 
   <!-- Google Fonts -->
@@ -26,7 +27,6 @@
     body { cursor: auto; }
     .cursor-dot, .cursor-ring { display: none; }
     a, button, .btn, .kpi-card { cursor: pointer; }
-    /* Navbar selalu solid di halaman laporan (tidak ada hero di bawahnya) */
     .navbar {
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(24px);
@@ -39,526 +39,24 @@
 
 <body>
 
-
-  <header class="navbar" role="banner">
-    <div class="container nav-inner">
-      <a class="nav-logo" href="index.html" aria-label="GBS Home">
-        <div class="nav-logo-mark" aria-hidden="true">GBS</div>
-        <div class="nav-logo-text">
-          Gadget Bekas
-          <span class="nav-logo-sub">Sidoarjo</span>
-        </div>
-      </a>
-
-      <nav aria-label="Primary navigation">
-        <ul class="nav-links">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="index.html#tentang">Tentang</a></li>
-          <li><a href="index.html#produk">Produk</a></li>
-          <li><a href="index.html#cara-beli">Cara Beli</a></li>
-          <li><a href="index.html#keunggulan">Keunggulan</a></li>
-          <li><a href="laporan-penjualan.html">Laporan</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="https://www.instagram.com/gadgetbekassidoarjo/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Instagram GBS">
-          <i class="fab fa-instagram" aria-hidden="true"></i> Instagram
-        </a>
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="WhatsApp GBS">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
-        </a>
-      </div>
-
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <button class="nav-drawer-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
-    <a href="index.html">Beranda</a>
-    <a href="index.html#tentang">Tentang</a>
-    <a href="index.html#produk">Produk</a>
-    <a href="index.html#cara-beli">Cara Beli</a>
-    <a href="index.html#keunggulan">Keunggulan</a>
-    <a href="laporan-penjualan.html">Laporan</a>
-    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top:1rem;justify-content:center">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-  </div>
+  <!-- NAVBAR -->
+  <div id="report-navbar-container"></div>
 
   <main>
-
-    <!-- ==================== REPORT HEADER ==================== -->
-    <section class="report-header" aria-labelledby="report-main-title">
-      <div class="container">
-        <div class="report-header-inner">
-          <div>
-            <span class="section-tag" style="margin-bottom:0.875rem">
-              <i class="fas fa-chart-line" aria-hidden="true"></i> Laporan Penjualan
-            </span>
-            <h1 class="report-title" id="report-main-title">
-              Rekap Penjualan Gadget Bekas
-            </h1>
-            <p class="report-subtitle">GBS — Gadget Bekas Sidoarjo</p>
-          </div>
-          <div class="report-year-badge">
-            <i class="fas fa-calendar-check" aria-hidden="true"></i>
-            Data Penuh Jan — Des 2025
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== KPI CARDS ==================== -->
-    <section class="kpi-section" aria-labelledby="kpi-heading">
-      <div class="container">
-        <h2 id="kpi-heading" class="sr-only">Key Performance Indicators 2025</h2>
-        <div class="kpi-grid" data-stagger>
-
-          <div class="kpi-card">
-            <div class="kpi-icon" aria-hidden="true">📦</div>
-            <div class="kpi-label">Total Unit Terjual</div>
-            <div class="kpi-value" data-count="85">0</div>
-            <div class="kpi-note up"><i class="fas fa-arrow-trend-up" aria-hidden="true"></i> Tablet jadi andalan</div>
-          </div>
-
-          <div class="kpi-card">
-            <div class="kpi-icon" aria-hidden="true">🏆</div>
-            <div class="kpi-label">Kategori Terlaris</div>
-            <div class="kpi-value" style="font-size:1.375rem">Tablet</div>
-            <div class="kpi-note info">41 unit · 48.2% dari total</div>
-          </div>
-
-          <div class="kpi-card">
-            <div class="kpi-icon" aria-hidden="true">📍</div>
-            <div class="kpi-label">Kota Terbanyak Pembeli</div>
-            <div class="kpi-value" style="font-size:1.5rem">Surabaya</div>
-            <div class="kpi-note info">108 unit · dominasi Jawa Timur</div>
-          </div>
-
-          <div class="kpi-card">
-            <div class="kpi-icon" aria-hidden="true">🗺️</div>
-            <div class="kpi-label">Total Kota Dijangkau</div>
-            <div class="kpi-value" data-count="29" data-suffix=" Kab/Kota">0</div>
-            <div class="kpi-note info">Tersebar di 8 provinsi + luar negeri</div>
-          </div>
-
-        </div><!-- /kpi-grid -->
-      </div>
-    </section>
-
-    <!-- ==================== CHARTS ==================== -->
-    <section class="charts-section" aria-labelledby="charts-heading">
-      <div class="container">
-        <h2 id="charts-heading" class="sr-only">Grafik Penjualan</h2>
-
-        <!-- Row 1: Donut + Location Bar -->
-        <div class="charts-row-1" data-stagger>
-          <!-- Category Donut -->
-          <div class="chart-card">
-            <div class="chart-card-head">
-              <div>
-                <div class="chart-card-title">Penjualan Per Kategori</div>
-                <div class="chart-card-sub">Distribusi unit terjual berdasarkan jenis produk</div>
-              </div>
-              <span class="chart-badge">4 Kategori</span>
-            </div>
-            <div class="chart-canvas-wrap">
-              <canvas id="categoryChart" aria-label="Grafik penjualan per kategori"></canvas>
-            </div>
-            <div id="categoryLegend" class="donut-legend"></div>
-          </div>
-
-          <!-- Location Bar -->
-          <div class="chart-card">
-            <div class="chart-card-head">
-              <div>
-                <div class="chart-card-title">Sebaran Lokasi Pelanggan</div>
-                <div class="chart-card-sub">Jumlah pelanggan (beli + jual) berdasarkan provinsi/region</div>
-              </div>
-              <span class="chart-badge">8 Region</span>
-            </div>
-            <div class="chart-canvas-wrap">
-              <canvas id="locationChart" aria-label="Grafik sebaran lokasi pelanggan"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <!-- Row 3: Top Products + Seller Origin -->
-        <div class="charts-row-2" data-stagger>
-          <!-- Top Products horizontal bar -->
-          <div class="chart-card">
-            <div class="chart-card-head">
-              <div>
-                <div class="chart-card-title">Produk Terlaris</div>
-                <div class="chart-card-sub">Perbandingan unit terjual antar kategori produk</div>
-              </div>
-              <span class="chart-badge">Ranking</span>
-            </div>
-            <div style="position:relative;height:260px">
-              <canvas id="topProductsChart" aria-label="Grafik produk terlaris"></canvas>
-            </div>
-          </div>
-
-          <!-- Best Seller -->
-          <div class="chart-card">
-            <div class="chart-card-head">
-              <div>
-                <div class="chart-card-title">Produk Best Seller</div>
-                <div class="chart-card-sub">Produk paling banyak terjual per kategori</div>
-              </div>
-              <span class="chart-badge">7 Produk</span>
-            </div>
-            <div style="position:relative;height:260px">
-              <canvas id="originChart" aria-label="Grafik produk best seller"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <!-- Insight Cards -->
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.125rem;margin-top:1.25rem" data-stagger>
-
-          <div class="chart-card" style="border-color:rgba(0,229,128,0.25)">
-            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
-              <div style="width:40px;height:40px;border-radius:10px;background:rgba(0,229,128,0.12);border:1px solid rgba(0,229,128,0.28);display:flex;align-items:center;justify-content:center;font-size:1.125rem">📲</div>
-              <div>
-                <div style="font-weight:700;font-size:0.9375rem">Kategori Terlaris</div>
-                <div style="font-size:0.75rem;color:var(--text-muted)">Mendominasi total penjualan</div>
-              </div>
-            </div>
-            <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--success)">48.2%</div>
-            <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:4px">Tablet — 41 dari 85 unit total</div>
-          </div>
-
-          <div class="chart-card" style="border-color:rgba(124,92,252,0.25)">
-            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
-              <div style="width:40px;height:40px;border-radius:10px;background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.28);display:flex;align-items:center;justify-content:center;font-size:1.125rem">🌍</div>
-              <div>
-                <div style="font-weight:700;font-size:0.9375rem">Jangkauan Luar Jawa</div>
-                <div style="font-size:0.75rem;color:var(--text-muted)">Bali, Sultra, NTT, Turki</div>
-              </div>
-            </div>
-            <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--accent-cyan)">14 Unit</div>
-            <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:4px">Pembelian dari luar Pulau Jawa · Termasuk luar negeri</div>
-          </div>
-
-        </div><!-- /insight cards -->
-
-      </div><!-- /container -->
-    </section>
-
-    <!-- ==================== CATEGORY & LOCATION TABLES ==================== -->
-    <section class="table-section" aria-labelledby="table-heading">
-      <div class="container">
-        <h2 id="table-heading" class="sr-only">Tabel Rekap 2025</h2>
-        <div class="table-card" data-reveal>
-          <div class="table-head">
-            <div>
-              <div class="table-title">Rekap Per Kategori Produk</div>
-              <div class="table-sub">Unit terjual dan porsi kontribusi tiap kategori</div>
-            </div>
-            <span class="chart-badge">4 Kategori</span>
-          </div>
-          <div style="overflow-x:auto">
-            <table class="data-table" aria-label="Tabel rekap per kategori produk">
-              <thead>
-                <tr>
-                  <th style="width:52px">#</th>
-                  <th>Kategori</th>
-                  <th>Unit Terjual</th>
-                  <th>Porsi (%)</th>
-                  <th>Volume Kontribusi</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="rank-badge rank-1">1</span></td>
-                  <td class="font-bold">📲 Tablet</td>
-                  <td>41</td>
-                  <td class="text-success">48.2%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="100" style="width:0%"></div></div><span>41</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-2">2</span></td>
-                  <td class="font-bold">📱 Handphone / HP</td>
-                  <td>18</td>
-                  <td>21.2%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="44" style="width:0%"></div></div><span>18</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-3">3</span></td>
-                  <td class="font-bold">🎒 Aksesoris <span style="font-size:0.75rem;color:var(--text-muted)">(Smartwatch 7, Mouse 5, Keyboard 5)</span></td>
-                  <td>17</td>
-                  <td>20.0%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="41" style="width:0%"></div></div><span>17</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-other">4</span></td>
-                  <td class="font-bold">💻 Laptop</td>
-                  <td>9</td>
-                  <td>10.6%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="22" style="width:0%"></div></div><span>9</span></div></td>
-                </tr>
-                <tr style="border-top:1px solid rgba(124,92,252,0.25);background:rgba(124,92,252,0.04)">
-                  <td>—</td>
-                  <td class="font-bold" style="color:var(--accent-cyan)">TOTAL</td>
-                  <td class="font-bold" style="color:var(--text-primary)">85</td>
-                  <td class="font-bold">100%</td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Location table -->
-        <div class="table-card" style="margin-top:1.5rem" data-reveal>
-          <div class="table-head">
-            <div>
-              <div class="table-title">Sebaran Lokasi Pelanggan — 2025</div>
-              <div class="table-sub">Total pelanggan (pembeli + penjual) berdasarkan provinsi/region · bukan unit terjual</div>
-            </div>
-            <span class="chart-badge">8 Region · 281 Pelanggan</span>
-          </div>
-          <div style="overflow-x:auto">
-            <table class="data-table" aria-label="Tabel sebaran lokasi pelanggan">
-              <thead>
-                <tr>
-                  <th style="width:52px">#</th>
-                  <th>Provinsi / Region</th>
-                  <th>Kota Utama</th>
-                  <th>Pelanggan</th>
-                  <th>Porsi (%)</th>
-                  <th>Volume</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="rank-badge rank-1">1</span></td>
-                  <td class="font-bold">Jawa Timur</td>
-                  <td style="color:var(--text-muted);font-size:0.8125rem">Surabaya 108, Sidoarjo 96, Malang 14 +10</td>
-                  <td>234</td>
-                  <td class="text-success font-bold">83.3%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="100" style="width:0%"></div></div><span>234</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-2">2</span></td>
-                  <td class="font-bold">DI Yogyakarta</td>
-                  <td style="color:var(--text-muted);font-size:0.8125rem">Sleman 18, Yogyakarta 6, Bantul 2, Kulon Progo 1</td>
-                  <td>30</td>
-                  <td>10.7%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="13" style="width:0%"></div></div><span>30</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-3">3</span></td>
-                  <td class="font-bold">Jawa Tengah</td>
-                  <td style="color:var(--text-muted);font-size:0.8125rem">Semarang 2, Boyolali 1, Purwokerto 1, Wonogiri 1</td>
-                  <td>5</td>
-                  <td>1.8%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="2" style="width:0%"></div></div><span>5</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-other">4</span></td>
-                  <td class="font-bold">Jabodetabek</td>
-                  <td style="color:var(--text-muted);font-size:0.8125rem">Jakarta 2, Bogor 1, Depok 1</td>
-                  <td>4</td>
-                  <td>1.4%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="2" style="width:0%"></div></div><span>4</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-other">5</span></td>
-                  <td class="font-bold">Bali</td>
-                  <td style="color:var(--text-muted);font-size:0.8125rem">Bali 3</td>
-                  <td>3</td>
-                  <td>1.1%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="1" style="width:0%"></div></div><span>3</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-other">6</span></td>
-                  <td class="font-bold">Sulawesi Tenggara</td>
-                  <td style="color:var(--text-muted);font-size:0.8125rem">Buton 2, Kendari 1</td>
-                  <td>3</td>
-                  <td>1.1%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="1" style="width:0%"></div></div><span>3</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-other">7</span></td>
-                  <td class="font-bold">Nusa Tenggara Timur</td>
-                  <td style="color:var(--text-muted);font-size:0.8125rem">Labuan Bajo 1</td>
-                  <td>1</td>
-                  <td>0.4%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="1" style="width:0%"></div></div><span>1</span></div></td>
-                </tr>
-                <tr>
-                  <td><span class="rank-badge rank-other">8</span></td>
-                  <td class="font-bold">Luar Negeri</td>
-                  <td style="color:var(--text-muted);font-size:0.8125rem">Turki 1</td>
-                  <td>1</td>
-                  <td>0.4%</td>
-                  <td><div class="progress-wrap"><div class="progress-bg"><div class="progress-fill" data-width="1" style="width:0%"></div></div><span>1</span></div></td>
-                </tr>
-                <tr style="border-top:1px solid rgba(124,92,252,0.25);background:rgba(124,92,252,0.04)">
-                  <td>—</td>
-                  <td class="font-bold" style="color:var(--accent-cyan)">TOTAL</td>
-                  <td>—</td>
-                  <td class="font-bold" style="color:var(--text-primary)">281</td>
-                  <td class="font-bold">100%</td>
-                  <td>—</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- Breakdown Jawa Timur per kota -->
-          <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid var(--border)">
-            <div style="font-weight:700;font-size:0.9375rem;margin-bottom:0.875rem;color:var(--text-primary)">
-              Detail Jawa Timur — Per Kota/Kabupaten
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:0.625rem">
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Surabaya</span>
-                <span style="font-weight:700;color:var(--text-primary)">108</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Sidoarjo</span>
-                <span style="font-weight:700;color:var(--accent-purple)">96</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Malang</span>
-                <span style="font-weight:700;color:var(--text-primary)">14</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Gresik</span>
-                <span style="font-weight:700;color:var(--text-primary)">4</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Jombang</span>
-                <span style="font-weight:700;color:var(--text-primary)">4</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Kediri</span>
-                <span style="font-weight:700;color:var(--text-primary)">3</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Blitar</span>
-                <span style="font-weight:700;color:var(--text-primary)">3</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Pasuruan</span>
-                <span style="font-weight:700;color:var(--text-primary)">2</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Bojonegoro</span>
-                <span style="font-weight:700;color:var(--text-primary)">1</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Lamongan</span>
-                <span style="font-weight:700;color:var(--text-primary)">1</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Madura</span>
-                <span style="font-weight:700;color:var(--text-primary)">1</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Mojokerto</span>
-                <span style="font-weight:700;color:var(--text-primary)">1</span>
-              </div>
-              <div style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center">
-                <span style="font-size:0.8125rem;color:var(--text-muted)">Probolinggo</span>
-                <span style="font-weight:700;color:var(--text-primary)">1</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /container -->
-    </section>
-
-    <!-- ==================== CTA ==================== -->
-    <section style="padding:3rem 0 5rem" aria-labelledby="report-cta-heading">
-      <div class="container">
-        <div class="cta-card" data-reveal="scale">
-          <span class="cta-tag"><i class="fas fa-home" aria-hidden="true"></i> Kembali ke Beranda</span>
-          <h2 class="cta-title" id="report-cta-heading">Tertarik Beli Gadget Bekas?</h2>
-          <p class="cta-desc">Data sudah berbicara — ratusan pelanggan puas telah berbelanja di GBS. Giliran kamu!</p>
-          <div class="cta-buttons">
-            <a href="index.html" class="btn btn-white btn-lg">
-              <i class="fas fa-home" aria-hidden="true"></i> Kembali ke Beranda
-            </a>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg">
-              <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat Sekarang
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- HEADER -->
+    <div id="report-header-container"></div>
+    <!-- KPI CARDS -->
+    <div id="report-kpi-container"></div>
+    <!-- CHARTS -->
+    <div id="report-charts-container"></div>
+    <!-- TABLES -->
+    <div id="report-tables-container"></div>
+    <!-- CTA -->
+    <div id="report-cta-container"></div>
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="nav-logo footer-logo">
-            <div class="nav-logo-mark" aria-hidden="true">GBS</div>
-            <div class="nav-logo-text">Gadget Bekas <span class="nav-logo-sub">Sidoarjo</span></div>
-          </div>
-          <p class="footer-brand-desc">Laporan ini merupakan rekap data penjualan internal GBS sepanjang tahun 2025.</p>
-          <div class="footer-socials">
-            <a href="https://www.instagram.com/gadgetbekassidoarjo/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
-              <i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp">
-              <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Navigasi</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="index.html#tentang">Tentang</a></li>
-            <li><a href="index.html#produk">Produk</a></li>
-            <li><a href="laporan-penjualan.html">Laporan</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Laporan</h3>
-          <ul class="footer-links">
-            <li><a href="#kpi-heading">KPI Overview</a></li>
-            <li><a href="#charts-heading">Grafik Penjualan</a></li>
-            <li><a href="#table-heading">Tabel Kategori &amp; Lokasi</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Kontak</h3>
-          <div class="footer-contact">
-            <div class="footer-contact-item">
-              <i class="fab fa-whatsapp footer-contact-icon" aria-hidden="true"></i>
-              <span>+62 812-3456-7890</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fab fa-instagram footer-contact-icon" aria-hidden="true"></i>
-              <span>@gadgetbekassidoarjo</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-location-dot footer-contact-icon" aria-hidden="true"></i>
-              <span>Sidoarjo, Jawa Timur</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p class="footer-copy">© 2025 <a href="index.html">GBS — Gadget Bekas Sidoarjo</a>. Data bersifat internal.</p>
-        <ul class="footer-bottom-links">
-          <li><a href="index.html">← Kembali ke Beranda</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  <!-- FOOTER -->
+  <div id="report-footer-container"></div>
 
   <!-- Floating WhatsApp -->
   <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp GBS">
@@ -567,10 +65,62 @@
   </a>
 
   <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>pt>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
-  <!-- Main JS + Charts JS -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/charts.js"></script>
+  <!-- Load partials, then scripts -->
+  <script>
+    const reportPartials = [
+      ['report/report-navbar',  'report-navbar-container'],
+      ['report/report-header',  'report-header-container'],
+      ['report/report-kpi',     'report-kpi-container'],
+      ['report/report-charts',  'report-charts-container'],
+      ['report/report-tables',  'report-tables-container'],
+      ['report/report-cta',     'report-cta-container'],
+      ['report/report-footer',  'report-footer-container'],
+    ];
+
+    async function loadReportPartials() {
+      console.log('Starting loadReportPartials...');
+      for (const [name, id] of reportPartials) {
+        const el = document.getElementById(id);
+        if (!el) {
+          console.warn(`Container #${id} not found`);
+          continue;
+        }
+        try {
+          console.log(`Loading partials/${name}.html...`);
+          const res = await fetch(`partials/${name}.html`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          el.innerHTML = await res.text();
+          console.log(`✅ Loaded ${name}`);
+        } catch (err) {
+          console.error(`❌ Failed ${name}:`, err);
+          el.innerHTML = `<p style="color:red">Error loading ${name}</p>`;
+        }
+      }
+
+      console.log('Loading main.js...');
+      const main = document.createElement('script');
+      main.src = 'assets/js/main.js';
+      main.onload = () => {
+        console.log('✅ main.js loaded');
+        // Trigger initReveal manually (no preloader on report page)
+        if (window.initReveal) {
+          setTimeout(() => window.initReveal(), 100);
+        }
+        console.log('Loading charts.js...');
+        const charts = document.createElement('script');
+        charts.src = 'assets/js/charts.js';
+        charts.onload = () => console.log('✅ charts.js loaded');
+        charts.onerror = (err) => console.error('❌ charts.js failed:', err);
+        document.body.appendChild(charts);
+      };
+      main.onerror = (err) => console.error('❌ main.js failed:', err);
+      document.body.appendChild(main);
+    }
+
+    document.addEventListener('DOMContentLoaded', loadReportPartials);
+  </script>
+
 </body>
 </html>

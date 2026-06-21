@@ -1,0 +1,103 @@
+<!-- Edit data chart di assets/js/charts.js -->
+<section class="charts-section" aria-labelledby="charts-heading">
+  <div class="container">
+    <h2 id="charts-heading" class="sr-only">Grafik Penjualan</h2>
+
+    <!-- ── Row 1: Donut Kategori + Bar Lokasi ── -->
+    <div class="charts-row-1" data-stagger>
+
+      <!-- Chart: Penjualan Per Kategori (Donut) → charts.js: initCategoryChart() -->
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <div>
+            <div class="chart-card-title">Penjualan Per Kategori</div>
+            <div class="chart-card-sub">Distribusi unit terjual berdasarkan jenis produk</div>
+          </div>
+          <span class="chart-badge">4 Kategori</span>
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="categoryChart" aria-label="Grafik penjualan per kategori"></canvas>
+        </div>
+        <div id="categoryLegend" class="donut-legend"></div>
+      </div>
+
+      <!-- Chart: Sebaran Lokasi Pelanggan (Bar) → charts.js: initLocationChart() -->
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <div>
+            <div class="chart-card-title">Sebaran Lokasi Pelanggan</div>
+            <div class="chart-card-sub">Jumlah pelanggan (beli + jual) berdasarkan provinsi/region</div>
+          </div>
+          <span class="chart-badge">8 Region</span>
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="locationChart" aria-label="Grafik sebaran lokasi pelanggan"></canvas>
+        </div>
+      </div>
+
+    </div><!-- /charts-row-1 -->
+
+    <!-- ── Row 2: Produk Terlaris + Best Seller ── -->
+    <div class="charts-row-2" data-stagger>
+
+      <!-- Chart: Produk Terlaris (Horizontal Bar) → charts.js: initTopProductsChart() -->
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <div>
+            <div class="chart-card-title">Produk Terlaris</div>
+            <div class="chart-card-sub">Perbandingan unit terjual antar kategori produk</div>
+          </div>
+          <span class="chart-badge">Ranking</span>
+        </div>
+        <div style="position:relative;height:260px">
+          <canvas id="topProductsChart" aria-label="Grafik produk terlaris"></canvas>
+        </div>
+      </div>
+
+      <!-- Chart: Produk Best Seller (Bar) → charts.js: initBestSellerChart() -->
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <div>
+            <div class="chart-card-title">Produk Best Seller</div>
+            <div class="chart-card-sub">Produk paling banyak terjual per kategori</div>
+          </div>
+          <span class="chart-badge">7 Produk</span>
+        </div>
+        <div style="position:relative;height:260px">
+          <canvas id="originChart" aria-label="Grafik produk best seller"></canvas>
+        </div>
+      </div>
+
+    </div><!-- /charts-row-2 -->
+
+    <!-- ── Insight Cards ── -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.125rem;margin-top:1.25rem" data-stagger>
+
+      <div class="chart-card" style="border-color:rgba(0,229,128,0.25)">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(0,229,128,0.12);border:1px solid rgba(0,229,128,0.28);display:flex;align-items:center;justify-content:center;font-size:1.125rem">📲</div>
+          <div>
+            <div style="font-weight:700;font-size:0.9375rem">Kategori Terlaris</div>
+            <div style="font-size:0.75rem;color:var(--text-muted)">Mendominasi total penjualan</div>
+          </div>
+        </div>
+        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--success)">48.2%</div>
+        <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:4px">Tablet — 41 dari 85 unit total</div>
+      </div>
+
+      <div class="chart-card" style="border-color:rgba(124,92,252,0.25)">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(124,92,252,0.12);border:1px solid rgba(124,92,252,0.28);display:flex;align-items:center;justify-content:center;font-size:1.125rem">🌍</div>
+          <div>
+            <div style="font-weight:700;font-size:0.9375rem">Jangkauan Luar Jawa</div>
+            <div style="font-size:0.75rem;color:var(--text-muted)">Bali, Sultra, NTT, Turki</div>
+          </div>
+        </div>
+        <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--accent-cyan)">14 Unit</div>
+        <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:4px">Pembelian dari luar Pulau Jawa · Termasuk luar negeri</div>
+      </div>
+
+    </div><!-- /insight cards -->
+
+  </div><!-- /container -->
+</section>
