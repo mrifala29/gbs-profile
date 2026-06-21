@@ -6,18 +6,18 @@
 'use strict';
 
 /* ── Preloader ────────────────────────────── */
-window.addEventListener('load', () => {
+function hidePreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
-  setTimeout(() => {
-    preloader.style.opacity = '0';
-    preloader.style.transition = 'opacity 0.55s ease';
-    preloader.addEventListener('transitionend', () => {
-      preloader.remove();
-      initReveal();
-    }, { once: true });
-  }, 2000);
-});
+  preloader.style.opacity = '0';
+  preloader.style.transition = 'opacity 0.55s ease';
+  preloader.addEventListener('transitionend', () => {
+    preloader.remove();
+    initReveal();
+  }, { once: true });
+}
+
+window.addEventListener('load', hidePreloader);
 
 /* ── Custom Cursor ────────────────────────── */
 (function initCursor() {
@@ -211,4 +211,5 @@ window.GBS_initProgressBars();
 /* ── Init on DOMContentLoaded ─────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   initReveal(); // fallback when no preloader (e.g., dev reload)
+  setTimeout(() => hidePreloader(), 100); // hide preloader if still visible
 });
