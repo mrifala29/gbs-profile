@@ -89,22 +89,29 @@ window.addEventListener('load', hidePreloader);
 
 /* ── Typewriter Effect ────────────────────── */
 (function initTypewriter() {
-  const el = document.querySelector('.typed-word');
-  if (!el) return;
-  const words = ['Laptop', 'Smartphone', 'Tablet', 'Smartwatch', 'Monitor', 'Keyboard', 'Mouse'];
-  let wi = 0, ci = 0, deleting = false;
+  function setup() {
+    const el = document.querySelector('.typed-word');
+    if (!el) {
+      setTimeout(setup, 200);
+      return;
+    }
 
-  function tick() {
-    const word = words[wi];
-    el.textContent = deleting ? word.slice(0, --ci) : word.slice(0, ++ci);
+    const words = ['Laptop', 'Smartphone', 'Tablet', 'Smartwatch', 'Monitor', 'Keyboard', 'Mouse', 'Headphones', 'Charger'];
+    let wi = 0, ci = 0, deleting = false;
 
-    let delay = deleting ? 70 : 130;
-    if (!deleting && ci === word.length) { deleting = true; delay = 1800; }
-    else if (deleting && ci === 0)       { deleting = false; wi = (wi + 1) % words.length; delay = 350; }
+    (function tick() {
+      const word = words[wi];
+      if (deleting) { ci--; } else { ci++; }
+      el.textContent = word.slice(0, ci);
 
-    setTimeout(tick, delay);
+      let delay = deleting ? 70 : 130;
+      if (!deleting && ci === word.length)  { deleting = true;  delay = 1800; }
+      else if (deleting && ci === 0)        { deleting = false; wi = (wi + 1) % words.length; delay = 350; }
+      setTimeout(tick, delay);
+    })();
   }
-  tick();
+
+  setup();
 })();
 
 /* ── Scroll Reveal ────────────────────────── */
